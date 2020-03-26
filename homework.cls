@@ -2,12 +2,30 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2020/03/25 Custom homework class]
 
+% Based off of the `article' class
+\LoadClass{article}
+
+
+%%%%
+% Global variables and document metadata
+%%%%
+
+\newcommand{\hwnum}{\{renewcommand hwnum\}}
+\newcommand{\course}{\{renewcommand course\}}
+\newcommand{\assignmentname}{Homework \hwnum}
+\newcommand{\name}{Jacob Strieb}
+\newcommand{\andrewid}{jstrieb}
+\newcommand{\email}{\andrewid @cmu.edu}
+
+% Document metadata -- implemented as a thunk that is called after variables are set
+\newcommand{\setmetadata}{
+    \usepackage[pdftex, pdfauthor={\name}, pdftitle={\course{} -- \assignmentname}]{hyperref}
+}
+
+
 %%%%
 % Imports and formatting
 %%%%
-
-% Based off of the `article' class
-\LoadClass{article}
 
 % Set the page on letter paper with microtype improvements and better list formatting
 \RequirePackage[letterpaper]{geometry}
@@ -25,6 +43,12 @@
 
 % Palatino typeface -- includes (old-style) text figures
 \RequirePackage[osf]{mathpazo}
+
+% Page header
+\RequirePackage{fancyhdr}
+\lhead{\name \\ \texttt{\email}}
+\rhead{\today \\ \course{} -- \assignmentname}
+\pagestyle{fancyplain}
     
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
 \RequirePackage{titlesec}
@@ -35,9 +59,6 @@
 %%%%
 % Custom commands -- words, environments, and formatting
 %%%%
-
-% Format an email address with a valid mailto link and appropriate font
-\newcommand{\emaillink}[1]{\href{mailto:#1}{\texttt{#1}}}
 
 % Headers for numbered problems
 \newcommand{\problem}[1]{\section{Problem #1}}
