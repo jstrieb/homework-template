@@ -1,3 +1,6 @@
 # Vim temporary swap files
 *.swp
 *.swo
+
+# TeX logs from accidentally running pdfTex on the cls file
+*.log
