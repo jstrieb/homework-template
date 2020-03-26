@@ -7,20 +7,39 @@
 
 
 %%%%
-% Global variables and document metadata
+% Package options and document metadata
 %%%%
 
-\newcommand{\hwnum}{\{renewcommand hwnum\}}
-\newcommand{\course}{\{renewcommand course\}}
-\newcommand{\assignmentname}{Homework \hwnum}
-\newcommand{\name}{Jacob Strieb}
-\newcommand{\andrewid}{jstrieb}
-\newcommand{\email}{\andrewid @cmu.edu}
+\RequirePackage{xkeyval}
 
-% Document metadata -- implemented as a thunk that is called after variables are set
-\newcommand{\setmetadata}{
-    \usepackage[pdftex, pdfauthor={\name}, pdftitle={\course{} -- \assignmentname}]{hyperref}
-}
+% Take key=val options from the \documentclass declaration
+\DeclareOptionX{name}[]{\newcommand{\name}{#1}}
+\DeclareOptionX{num}[]{\newcommand{\hwnum}{#1}}
+\DeclareOptionX{course}[]{\newcommand{\course}{#1}}
+\DeclareOptionX{andrewid}[]{\newcommand{\andrewid}{#1}}
+\DeclareOptionX{type}[Homework]{\newcommand{\assignmenttype}{#1}}
+\DeclareOptionX{emaildomain}[cmu.edu]{\newcommand{\emaildomain}{#1}}
+
+\ProcessOptionsX\relax
+
+% Raise errors if any of the options are undefined
+\@ifundefined{name}{ \ClassError{homework}{name option required}{} }{}
+\@ifundefined{hwnum}{ \ClassError{homework}{hwnum option required}{} }{}
+\@ifundefined{course}{ \ClassError{homework}{course option required}{} }{}
+\@ifundefined{andrewid}{ \ClassError{homework}{andrewid option required}{} }{}
+
+% Set default values if optional options are undefined
+\@ifundefined{emaildomain}{ \newcommand{\emaildomain}{cmu.edu} }{}
+\@ifundefined{assignmenttype}{ \newcommand{\assignmenttype}{Homework} }{}
+
+% Define commands depending on components passed as key/values or default options
+\newcommand{\assignmentname}{\assignmenttype{} \hwnum}
+\newcommand{\email}{\andrewid @\emaildomain}
+
+% Set PDF metadata based on the global variables
+\RequirePackage[pdftex,
+    pdfauthor={\name},
+    pdftitle={\course{} -- \assignmentname}]{hyperref}
 
 
 %%%%
