@@ -1,0 +1,77 @@
+\documentclass[name=Jacob\ Strieb, andrewid=jstrieb, course=69-420, num=8]{homework}
+
+\begin{document}
+    
+\problem{1}
+
+\begin{claim}
+    The set of rational numbers ($\Q$) is countable.
+\end{claim}
+\begin{proof}
+    Let $x \in \Q$. Then, by definition, we can write $x = \frac{a}{b}$ for some $a, b \in \Z$. This fraction can be uniquely mapped to a tuple $(a, b) \in \Z \times \Z$. This means that there exists an injective mapping $\Q \to \Z \times \Z$ that maps each fraction to a tuple. Thus, we have:
+    $$ |\Q| \leq |\Z \times \Z| \leq |\N| $$
+    
+    By the countability of $|\N|$, we have shown that $\Q$ is countable.
+\end{proof}
+\newpage
+
+\problem2
+Let $E$ be an event, and let $1_E : \Omega \to \{ 0, 1 \}$ be an indicator random variable such that:
+$$ 1_E(\omega) = \begin{cases}
+1 & \omega \in E \\
+0 & \omega \notin E
+\end{cases} $$
+
+\begin{claim}
+    The expectation of $E$ is equal to the probability that $1_E = 1$. In other words:
+    $$ \E{1_E} = \P{E} $$
+\end{claim}
+\begin{proof}
+    \begin{align*}
+    \E{1_E} &= \P{1_E = 1} \cdot 1 + \P{1_E = 0} \cdot 0 \\
+    &= \P{1_E = 1} \\
+    &= \P{ \{ \omega \in \Omega : 1_E(\omega) = 1 \} } \\
+    &= \P{E}
+    \end{align*}
+\end{proof}
+\newpage
+
+\problem3
+
+\begin{claim}
+    $e^{iy} = \cos y + i \sin y$ for $y \in \R$
+\end{claim}
+\begin{proof}
+    We begin by noting that $e^x = \sum_{i = 0}^\infty \frac{x^i}{i!}$. Plugging in $x = yi$ for the exponent in $e^x$ gives:
+    \begin{align*}
+    e^{yi} &= \sum_{n = 0}^\infty \frac{(yi)^n}{n!} \\
+    &= \sum_{n = 0}^\infty \frac{y^{4n}}{(4n)!} + \sum_{n = 0}^\infty i \cdot \frac{y^{4n + 1}}{(4n + 1)!} + \sum_{n = 0}^\infty -1 \cdot \frac{y^{4n + 2}}{(4n + 2)!} + \sum_{n = 0}^\infty -i \cdot \frac{y^{4n + 3}}{(4n + 3)!} \\
+    &= \sum_{n = 0}^\infty \frac{y^{4n}}{(4n)!} - \frac{y^{4n + 2}}{(4n + 2)!} + i \lrp{ \sum_{n = 0}^\infty \frac{y^{4n + 1}}{(4n + 1)!} - \frac{y^{4n + 3}}{(4n + 3)!} } \\
+    &= \sum_{n = 0}^\infty \frac{(-1)^n y^{2n}}{(2n)!} + i \lrp{\sum_{n = 0}^\infty \frac{(-1)^n y^{2n + 1}}{(2n + 1)!}} \\
+    &= \cos y + i \sin y
+    \end{align*} 
+    
+    This equality holds because the series representations of $\sin$ and $\cos$ are convergent. Thus, $e^{iy} = \cos y + i \sin y$ for $y \in \R$, as required.
+\end{proof}
+\newpage
+
+\problem4
+
+\begin{claim}
+    Two identical decks of $n$ cards have a $k$-matching with probability:
+    $$ \pi_k = \frac1{k!} \lrp{ 1 - \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} } $$
+\end{claim}
+\begin{proof}
+    First, we pick and order $k$ cards to be matched. The probability of the selected card orders matching is $\frac{1}{k!}$.
+    
+    Now, we consider the probability that the remaining $n - k$ cards \textit{do not} match. Similar to the examples from class and the textbook, this is an instance of an indexed union of sets $A_i \in \mathcal{F}$ such that $A_i$ is the set of permutations in which $f(i) = i$. But since we are looking for the probability of this not happening, we consider the probability of the complement, computed as 1 minus the probability of this union of events.
+    
+    By the Inclusion-Exclusion principle, based on the notes from class, we have that
+    $$ \P{ \bigcup_{i = 1}^{n - k} A_i } = \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} $$
+    
+    Putting everything together, we get the following, and we're done.
+    $$ \pi_k = \frac1{k!} \lrp{ 1 - \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} }$$
+\end{proof}
+
+
+\end{document}
