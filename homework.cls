@@ -131,11 +131,12 @@
 \newcommand{\ddx}{\ensuremath{\frac{d}{dx}}}
 
 % Probability measure, expectation, and variance formatting
-\newcommand{\E}[1]{\mathbb{E}\left[ #1 \right]}
-\renewcommand{\P}[1]{\mathbb{P}\left[ #1 \right]}
+\newcommand{\expect}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\prob}[1]{\mathbb{P}\left[ #1 \right]}
 \newcommand{\var}[1]{\mathrm{var}\left( #1 \right)}
 
 % Commonly-used computer science languages
+\renewcommand{\P}{\ensuremath{\mathsf{P}}}
 \newcommand{\NP}{\ensuremath{\mathsf{NP}}}
 \newcommand{\coNP}{\ensuremath{\mathsf{coNP}}}
 
