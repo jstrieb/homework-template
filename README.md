@@ -42,7 +42,7 @@ make install
 
 Instead of using the template with a local `tex` installation, it is also possible to use the template with Overleaf/ShareLaTeX. 
 
-1. Download the repository as a `zip` file using the green button near the top-right of this page. 
+1. Download the repository as a `zip` file by clicking [here](https://github.com/jstrieb/homework-template/archive/master.zip), or by using the green "Clone" button near the top-right of this page. 
 
 2. Create a new project on Overleaf/ShareLaTeX and upload the `zip` file there.
 
