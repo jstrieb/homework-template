@@ -24,14 +24,14 @@ $$ 1_E(\omega) = \begin{cases}
 
 \begin{claim}
     The expectation of $1_E$ is equal to the probability that $E$ occurs. In other words:
-    $$ \E{1_E} = \P{E} $$
+    $$ \expect{1_E} = \prob{E} $$
 \end{claim}
 \begin{proof}
     \begin{align*}
-    \E{1_E} &= \P{1_E = 1} \cdot 1 + \P{1_E = 0} \cdot 0 \\
-    &= \P{1_E = 1} \\
-    &= \P{ \{ \omega \in \Omega : 1_E(\omega) = 1 \} } \\
-    &= \P{E}
+    \expect{1_E} &= \prob{1_E = 1} \cdot 1 + \prob{1_E = 0} \cdot 0 \\
+    &= \prob{1_E = 1} \\
+    &= \prob{ \{ \omega \in \Omega : 1_E(\omega) = 1 \} } \\
+    &= \prob{E}
     \end{align*}
 \end{proof}
 \newpage
@@ -67,7 +67,7 @@ $$ 1_E(\omega) = \begin{cases}
     Now, we consider the probability that the remaining $n - k$ cards \textit{do not} match. Similar to the examples from class and the textbook, this is an instance of an indexed union of sets $A_i \in \mathcal{F}$ such that $A_i$ is the set of permutations in which $f(i) = i$. But since we are looking for the probability of this not happening, we consider the probability of the complement, computed as 1 minus the probability of this union of events.
     
     By the Inclusion-Exclusion principle, based on the notes from class, we have that
-    $$ \P{ \bigcup_{i = 1}^{n - k} A_i } = \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} $$
+    $$ \prob{ \bigcup_{i = 1}^{n - k} A_i } = \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} $$
     
     Putting everything together, we get the following, and we're done.
     $$ \pi_k = \frac1{k!} \lrp{ 1 - \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} }$$
