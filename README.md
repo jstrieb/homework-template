@@ -35,7 +35,7 @@ git clone https://github.com/jstrieb/homework-template.git && cd homework-templa
 make install
 ```
 
-3. If the previous steps did not work, consult the sage wisdom of Stack Exchange for where to install the `.cls` file. In particular, [this answer](https://tex.stackexchange.com/a/1138/150811) may be helpful.
+3. If the previous steps did not work, consult the sage wisdom of Stack Exchange for where to install the `.cls` and `.sty` files. In particular, [this answer](https://tex.stackexchange.com/a/1138/150811) may be helpful. Note that both the `homework.cls` and `hw-shortcuts.sty` files should be moved to the same directory to make them accessible.
 
 
 ## Overleaf & ShareLaTeX
