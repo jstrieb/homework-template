@@ -40,6 +40,10 @@
 \RequirePackage[pdftex,
     pdfauthor={\name},
     pdftitle={\course{} -- \assignmentname}]{hyperref}
+    
+% Set the author and title in case the user wants to make a title page
+\title{\course{} -- \assignmentname}
+\author{\name}
 
 
 %%%%
@@ -100,6 +104,15 @@
 % See: https://tex.stackexchange.com/a/47353/150811
 \let\textand\&
 \renewcommand{\&}{\textit{\textand}}
+
+% Redefine the maketitle command to format properly, and not have a header on the page
+\let\origtitle\maketitle
+\renewcommand{\maketitle}{
+    \setlength{\parskip}{0em}
+    \origtitle
+    \thispagestyle{empty}
+    \setlength{\parskip}{1em}
+}
 
 % Redefine epsilon and empty set commands to use better-looking versions
 \renewcommand{\epsilon}{\ensuremath{\varepsilon}}
