@@ -86,7 +86,7 @@
 \newcommand{\todo}{\fbox{TO-DO}\ \ }
 
 % 75% measure rules to split problems into sections
-\newcommand{\separator}{\begin{center} \rule{0.75\linewidth}{0.5pt} \\ \end{center}}
+\newcommand{\separator}{\vfill \begin{center} \rule{0.75\linewidth}{0.5pt} \\ \end{center} \vfill}
 
 % Environment for consistently-formatted claim statements
 \newenvironment{claim}{\textit{Claim.}}{\vspace{-1em}}
