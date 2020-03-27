@@ -6,9 +6,9 @@
 \LoadClass{article}
 
 
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Package options and document metadata
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{xkeyval}
 
@@ -46,9 +46,9 @@
 \author{\name}
 
 
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Imports and formatting
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Set the page on letter paper with microtype improvements and better list formatting
 \RequirePackage[letterpaper]{geometry}
@@ -79,9 +79,9 @@
 \titlespacing{\section}{0em}{0em}{1em}
     
     
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom commands -- words, environments, and formatting
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Headers for numbered problems
 \newcommand{\problem}[1]{\section{Problem #1}}
@@ -96,9 +96,9 @@
 \newenvironment{claim}{\textit{Claim.}}{\vspace{-1em}}
 
 
-%%%%
-% Custom commands -- redefined
-%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands -- redefined commands that should look or behave differently
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Redefine the ampersand to use the italic version by default - as-per Elements of Typographic Style
 % See: https://tex.stackexchange.com/a/47353/150811
@@ -121,38 +121,3 @@
 % Redefine the bar and vec commands to use larger overlines and bold-faced vectors
 \renewcommand{\bar}{\overline}
 \renewcommand{\vec}{\mathbf}
-
-
-%%%%
-% Custom commands -- math symbols and math shortcuts
-%%%%
-
-% Shortcuts for left/right parentheses, square brackets, and curly braces
-\newcommand{\lrp}[1]{\left( #1 \right)}
-\newcommand{\lrs}[1]{\left[ #1 \right]}
-\newcommand{\lrc}[1]{\left{ #1 \right}}
-
-% Commonly-used sets
-\newcommand{\N}{\ensuremath{\mathbb{N}}}
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
-\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
-\newcommand{\C}{\ensuremath{\mathbb{C}}}
-
-% Powerset and shortcut for derivative
-\newcommand{\powerset}{\ensuremath{\mathcal{P}}}
-\newcommand{\ddx}{\ensuremath{\frac{d}{dx}}}
-
-% Probability measure, expectation, and variance formatting
-\newcommand{\expect}[1]{\mathbb{E}\left[ #1 \right]}
-\newcommand{\prob}[1]{\mathbb{P}\left[ #1 \right]}
-\newcommand{\var}[1]{\mathrm{var}\left( #1 \right)}
-
-% Commonly-used computer science languages
-\renewcommand{\P}{\ensuremath{\mathsf{P}}}
-\newcommand{\NP}{\ensuremath{\mathsf{NP}}}
-\newcommand{\coNP}{\ensuremath{\mathsf{coNP}}}
-
-% Commonly-used reductions add semantic clarity
-\newcommand{\CookReducesTo}{\ensuremath{\leq^P_T}}
-\newcommand{\KarpReducesTo}{\ensuremath{\leq^P_m}}

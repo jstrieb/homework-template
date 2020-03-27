@@ -1,21 +1,24 @@
-\documentclass[name=Jacob\ Strieb, andrewid=jstrieb, course=69-420, num=8]{homework}
+\documentclass[name=Jacob\ Strieb, andrewid=jstrieb, course=69-420, num=4]{homework}
+
+\usepackage{hw-shortcuts}
 
 \begin{document}
     
-\problem{1}
+\problem{1a}
 
 \begin{claim}
     The set of rational numbers ($\Q$) is countable.
 \end{claim}
 \begin{proof}
-    Let $x \in \Q$. Then, by definition, we can write $x = \frac{a}{b}$ for some $a, b \in \Z$. This fraction can be uniquely mapped to a tuple $(a, b) \in \Z \times \Z$. This means that there exists an injective mapping $\Q \to \Z \times \Z$ that maps each fraction to a tuple. Thus, we have:
+    Let $x \in \Q$. Then, by definition, we can write $x = \frac{a}{b}$ for some $a, b \in \Z, b \neq 0$. This fraction can be uniquely mapped to a tuple $(a, b) \in \Z \times \Z$. This means that there exists an injective mapping $\Q \to \Z \times \Z$ that maps each fraction to a tuple. Thus, we have:
     $$ |\Q| \leq |\Z \times \Z| \leq |\N| $$
     
-    By the countability of $|\N|$, we have shown that $\Q$ is countable.
+    By the countability of $\N$, we have shown that $\Q$ is countable.
 \end{proof}
-\newpage
 
-\problem2
+\separator
+
+\problem{1b}
 Let $E$ be an event, and let $1_E : \Omega \to \{ 0, 1 \}$ be an indicator random variable such that:
 $$ 1_E(\omega) = \begin{cases}
 1 & \omega \in E \\
@@ -36,7 +39,7 @@ $$ 1_E(\omega) = \begin{cases}
 \end{proof}
 \newpage
 
-\problem3
+\problem2
 
 \begin{claim}
     $e^{iy} = \cos y + i \sin y$ for $y \in \R$
@@ -55,6 +58,18 @@ $$ 1_E(\omega) = \begin{cases}
 \end{proof}
 \newpage
 
+\problem{3}
+\begin{claim}
+    $\P \neq \NP$
+\end{claim}
+
+\begin{proof}
+    We have already shown that $\P \subseteq \NP$, so to prove that $\NP \neq \P$ it suffices to show that $\NP \not \subseteq \P$. We begin by fixing a language $L \in \NP$. 
+    
+    \todo % TODO: Complete this problem later
+\end{proof}
+\newpage
+
 \problem4
 
 \begin{claim}
@@ -64,9 +79,9 @@ $$ 1_E(\omega) = \begin{cases}
 \begin{proof}
     First, we pick and order $k$ cards to be matched. The probability of the selected card orders matching is $\frac{1}{k!}$.
     
-    Now, we consider the probability that the remaining $n - k$ cards \textit{do not} match. Similar to the examples from class and the textbook, this is an instance of an indexed union of sets $A_i \in \mathcal{F}$ such that $A_i$ is the set of permutations in which $f(i) = i$. But since we are looking for the probability of this not happening, we consider the probability of the complement, computed as 1 minus the probability of this union of events.
+    Now, we consider the probability that the remaining $n - k$ cards \textit{do not} match. Similar to the examples from class and the textbook, this is an instance of an indexed union of sets $A_i \in \mathcal{F}$ such that $A_i$ is the set of permutations in which $f(i) = i$. But since we are looking for the probability of this not happening, we consider the probability of the complement, computed as $1$ minus the probability of this union of events.
     
-    By the Inclusion-Exclusion principle, based on the notes from class, we have that
+    By the Inclusion-Exclusion principle, based on the notes from class, we have that:
     $$ \prob{ \bigcup_{i = 1}^{n - k} A_i } = \sum_{i = 1}^{n - k} \frac{(-1)^i}{i!} $$
     
     Putting everything together, we get the following, and we're done.
