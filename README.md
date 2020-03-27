@@ -9,15 +9,17 @@ In particular, the class is designed to be consistent with best-practices from t
 At the time of this template's release, university classes are primarily being conducted remotely. As such, homework submission and grading are primarily performed digitally. This template includes a number of typographic optimizations that make homework assignments easy to read and grade using online platforms such as Gradescope:
 
 - Header with student information is included on every page for quick reference
-- Palatino typeface is optimized for digital reading at various sizes than Computer Modern, the default LaTeX font
-- A moderately-sized solution can fit on a single page, set on letter paper
+- Palatino typeface is optimized for digital reading at various sizes, unlike Computer Modern, the default LaTeX font
+- Page layout such that a moderately-sized solution can fit on a single page, set on letter paper
 - PDF metadata is automatically included
-- Microtype improves [numerous typographic aspects](http://www.khirevich.com/latex/microtype/) of the text to maximize readability and compactness
+- Microtype is employed to improve [numerous typographic aspects](http://www.khirevich.com/latex/microtype/) of the text, maximizing readability and compactness
 
 
 # Minimal Example
 
-The included [`example.tex`](example.tex) utilizes some of the macros included in the class. The generated [`example.pdf`](example.pdf) provides a sample of what a multi-page typeset assignment might look like. An additional example is included below:
+The included [`example.tex`](example.tex) utilizes some of the macros included in the class. The generated [`example.pdf`](example.pdf) provides a sample of what a multi-page typeset assignment might look like. Alternatively, [open the example in Overleaf](https://www.overleaf.com/read/tskjhbypnhgc)
+
+An additional example is included below:
 ![Single-page example](example.png?raw=true)
 
 
@@ -38,7 +40,7 @@ make install
 
 ## Overleaf & ShareLaTeX
 
-Instead of using the template with a local `tex` installation, it is also possible to use the template with Overleaf/ShareLaTeX.
+Instead of using the template with a local `tex` installation, it is also possible to use the template with Overleaf/ShareLaTeX. 
 
 1. Download the repository as a `zip` file using the green button near the top-right of this page. 
 
@@ -46,7 +48,7 @@ Instead of using the template with a local `tex` installation, it is also possib
 
 3. Either create a new `tex` file, or overwrite the contents of the `example.tex` file to typeset your document.
 
-The template is currently in the process of being added to OVerleaf, after which a link will be available that allows for streamlined cloning and use.
+The template is currently in the process of being added to the OVerleaf gallery, after which a link will be available that allows for streamlined cloning and use. In the meantime, it may be possible to copy the project from [this overleaf project](https://www.overleaf.com/read/tskjhbypnhgc).
 
 
 # Usage & Notes
@@ -73,7 +75,7 @@ The following key-value parameters are accepted by the document class at declara
 
 ## Math Shortcuts
 
-To use the custom math shortcuts, use the `hw-shortcuts` package. This package does not take any parameters. The contents of the shortcuts package will likely change significantly over time as I add macros based on what is required for my homework. 
+To use the custom math shortcuts, use the `hw-shortcuts` package. This package does not take any parameters. The contents of the shortcuts package will likely change significantly over time as I add macros based on what is required for my homework. Most users will likely not want to use the math shortcuts without amendment, because they are fairly specific to the homework I have been doing.
 ```
 \usepackage{hw-shortcuts}
 ```
