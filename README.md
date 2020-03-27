@@ -1,4 +1,4 @@
-# LaTeX Template for Homework Problem Sets
+# LaTeX Homework Template for Submitting Online
 
 This simple LaTeX homework template consists of a class file and shortcut package that contain best-practice document style settings and shortcut commands (respectively). Designed specifically for typesetting solutions to math and computer science problem sets that will be graded online, this homework template is intended to make typing solutions as quick, painless, and visually consistent as possible.
 
