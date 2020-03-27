@@ -68,9 +68,9 @@ The following key-value parameters are accepted by the document class at declara
 - `name` (required) – name of the student typing the assignment
 - `num` (required) – homework assignment number
 - `course` (required) – course identifier
-- `andrewid` (required) – Andrew ID
+- `andrewid` (required) – Student ID (used for student email)
 - `type` (optional) – assignment type; defaults to "Homework"
-- `emaildomain` (optional) – email address domain to be used with Andrew ID; defaults to `cmu.edu`
+- `emaildomain` (optional) – email address domain to be used with student ID; defaults to `cmu.edu`
 
 
 ## Math Shortcuts
