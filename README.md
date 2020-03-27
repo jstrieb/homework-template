@@ -4,6 +4,16 @@ This simple LaTeX class file and shortcut package contain document style setting
 
 In particular, the class is designed to be consistent with best-practices from the authoritative [_Elements of Typographic Style_ by Robert Bringhurst](https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style). By default, the text is set in the [Palatino](https://en.wikipedia.org/wiki/Palatino) typeface, created by the late [Hermann Zapf](https://en.wikipedia.org/wiki/Hermann_Zapf) (who worked with Don Knuth to create some of the first [digital typefaces for setting mathematics](http://ultrasparky.org/school/pdf/DanielRhatigan_Dissertation.pdf)). Palatino (via the `mathpazo` package with the `osf` option) was chosen specifically because it uses [old-style figures](https://en.wikipedia.org/wiki/Text_figures) for numbers outside of math mode, as opposed to the typical—improper—lining figures, which should ideally be exclusively reserved for setting math. It also contains tasteful small caps for setting the section headers that title each problem. Moreover, Palatino is a splendid face in general.
 
+## Online Optimizations
+
+At the time of this template's release, university classes are primarily being conducted remotely. As such, homework submission and grading are primarily performed digitally. This template includes a number of typographic optimizations that make homework assignments easy to read and grade using online platforms such as Gradescope:
+
+- Header with student information is included on every page for quick reference
+- Palatino typeface is optimized for digital reading at various sizes than Computer Modern, the default LaTeX font
+- A moderately-sized solution can fit on a single page, set on letter paper
+- PDF metadata is automatically included
+- Microtype improves [numerous typographic aspects](http://www.khirevich.com/latex/microtype/) of the text to maximize readability and compactness
+
 
 # Minimal Example
 
@@ -24,6 +34,19 @@ make install
 ```
 
 3. If the previous steps did not work, consult the sage wisdom of Stack Exchange for where to install the `.cls` file. In particular, [this answer](https://tex.stackexchange.com/a/1138/150811) may be helpful.
+
+
+## Overleaf & ShareLaTeX
+
+Instead of using the template with a local `tex` installation, it is also possible to use the template with Overleaf/ShareLaTeX.
+
+1. Download the repository as a `zip` file using the green button near the top-right of this page. 
+
+2. Create a new project on Overleaf/ShareLaTeX and upload the `zip` file there.
+
+3. Either create a new `tex` file, or overwrite the contents of the `example.tex` file to typeset your document.
+
+The template is currently in the process of being added to OVerleaf, after which a link will be available that allows for streamlined cloning and use.
 
 
 # Usage & Notes
