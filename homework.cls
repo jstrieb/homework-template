@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Created by Jacob Strieb (while math procrastinating homework)  %
+%                          March, 2020                           %
+%          https://github.com/jstrieb/homework-template          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 % Required for TeX classes
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2020/03/25 Custom homework class]
@@ -40,7 +47,7 @@
 \RequirePackage[pdftex,
     pdfauthor={\name},
     pdftitle={\course{} -- \assignmentname}]{hyperref}
-    
+
 % Set the author and title in case the user wants to make a title page
 \title{\course{} -- \assignmentname}
 \author{\name}
@@ -72,13 +79,13 @@
 \lhead{\name \\ \texttt{\email}}
 \rhead{\today \\ \course{} -- \assignmentname}
 \pagestyle{fancyplain}
-    
+
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
 \RequirePackage{titlesec}
 \titleformat{\section}{\large\sc}{}{0em}{}
 \titlespacing{\section}{0em}{0em}{1em}
-    
-    
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom commands -- words, environments, and formatting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
