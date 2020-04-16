@@ -16,12 +16,14 @@
 % Shortcuts for left/right parentheses, square brackets, and curly braces
 \newcommand{\lrp}[1]{\left( #1 \right)}
 \newcommand{\lrs}[1]{\left[ #1 \right]}
-\newcommand{\lrc}[1]{\left{ #1 \right}}
+\newcommand{\lrc}[1]{\left\{ #1 \right\}}
+\newcommand{\lrb}[1]{\left| #1 \right|}
 
 % Commonly-used sets
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
 
@@ -33,6 +35,7 @@
 \newcommand{\expect}[1]{\mathbb{E}\left[ #1 \right]}
 \newcommand{\prob}[1]{\mathbb{P}\left[ #1 \right]}
 \newcommand{\var}[1]{\mathrm{var}\left( #1 \right)}
+\newcommand{\cov}[1]{\mathrm{cov}\left( #1 \right)}
 
 % Commonly-used computer science languages
 \renewcommand{\P}{\ensuremath{\mathsf{P}}}
@@ -42,3 +45,7 @@
 % Commonly-used reductions add semantic clarity
 \newcommand{\CookReducesTo}{\ensuremath{\leq^P_T}}
 \newcommand{\KarpReducesTo}{\ensuremath{\leq^P_m}}
+
+% Set of functions integrable in the Riemann sense and equal sign denoted with L'Hospitals' rule
+\newcommand{\Rf}{\ensuremath{\mathcal{R}(\alpha)}}
+\newcommand{\lh}{\ensuremath{\overset{\text{L'H}}{=}}}
