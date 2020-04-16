@@ -26,6 +26,7 @@
 \DeclareOptionX{andrewid}[]{\newcommand{\andrewid}{#1}}
 \DeclareOptionX{type}[Homework]{\newcommand{\assignmenttype}{#1}}
 \DeclareOptionX{emaildomain}[cmu.edu]{\newcommand{\emaildomain}{#1}}
+\DeclareOptionX{probword}[Problem]{\newcommand{\probword}{#1}}
 
 \ProcessOptionsX\relax
 
@@ -38,6 +39,7 @@
 % Set default values if optional options are undefined
 \@ifundefined{emaildomain}{ \newcommand{\emaildomain}{cmu.edu} }{}
 \@ifundefined{assignmenttype}{ \newcommand{\assignmenttype}{Homework} }{}
+\@ifundefined{probword}{ \newcommand{\probword}{Problem} }{}
 
 % Define commands depending on components passed as key/values or default options
 \newcommand{\assignmentname}{\assignmenttype{} \hwnum}
@@ -79,6 +81,7 @@
 \lhead{\name \\ \texttt{\email}}
 \rhead{\today \\ \course{} -- \assignmentname}
 \pagestyle{fancyplain}
+\setlength{\headheight}{2\baselineskip} % Fix first page setting above the frame
 
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
 \RequirePackage{titlesec}
@@ -91,7 +94,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Headers for numbered problems
-\newcommand{\problem}[1]{\section{Problem #1}}
+\newcommand{\problem}[1]{\section{\probword{} #1}}
 
 % Boxed ``to-do'' statements to make incomplete problems clear
 \newcommand{\todo}{\fbox{TO-DO}\ \ }
