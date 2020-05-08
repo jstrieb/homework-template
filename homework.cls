@@ -88,6 +88,9 @@
 \titleformat{\section}{\large\sc}{}{0em}{}
 \titlespacing{\section}{0em}{0em}{1em}
 
+\titleformat{\subsection}{\normalsize\sc}{}{0em}{}
+\titlespacing{\subsection}{0em}{0em}{1em}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom commands -- words, environments, and formatting
@@ -126,7 +129,8 @@
 
 % Redefine epsilon and empty set commands to use better-looking versions
 \renewcommand{\epsilon}{\ensuremath{\varepsilon}}
-\renewcommand{\emptyset}{\varnothing}
+\renewcommand{\emptyset}{\ensuremath{\varnothing}}
+\renewcommand{\phi}{\ensuremath{\varphi}}
 
 % Redefine the bar and vec commands to use larger overlines and bold-faced vectors
 \renewcommand{\bar}{\overline}
