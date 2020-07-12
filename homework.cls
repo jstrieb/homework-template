@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Created by Jacob Strieb (while math procrastinating homework)  %
+% Created by Jacob Strieb (while procrastinating math homework)  %
 %                          March, 2020                           %
 %          https://github.com/jstrieb/homework-template          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
