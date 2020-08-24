@@ -48,7 +48,7 @@ Instead of using the template with a local `tex` installation, it is also possib
 
 3. Either create a new `tex` file, or overwrite the contents of the `example.tex` file to typeset your document.
 
-The template is currently in the process of being added to the OVerleaf gallery, after which a link will be available that allows for streamlined cloning and use. In the meantime, it may be possible to copy the project from [this overleaf project](https://www.overleaf.com/read/tskjhbypnhgc).
+The template is currently in the process of being added to the Overleaf gallery, after which a link will be available that allows for streamlined cloning and use. In the meantime, it may be possible to copy the project from [this Overleaf project](https://www.overleaf.com/read/tskjhbypnhgc).
 
 
 # Usage & Notes
