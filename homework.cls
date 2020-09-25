@@ -85,10 +85,10 @@
 
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
 \RequirePackage{titlesec}
-\titleformat{\section}{\large\sc}{}{0em}{}
+\titleformat{\section}{\large\sc\lowercase}{}{0em}{}
 \titlespacing{\section}{0em}{0em}{1em}
 
-\titleformat{\subsection}{\normalsize\sc}{}{0em}{}
+\titleformat{\subsection}{\normalsize\sc\lowercase}{}{0em}{}
 \titlespacing{\subsection}{0em}{0em}{1em}
 
 
@@ -103,7 +103,8 @@
 \newcommand{\todo}{\fbox{TO-DO}\ \ }
 
 % 75% measure rules to split problems into sections
-\newcommand{\separator}{\vfill \begin{center} \rule{0.75\linewidth}{0.5pt} \\ \end{center} \vfill}
+\newcommand{\seprule}{\begin{center} \rule{0.75\linewidth}{0.5pt} \\ \end{center}}
+\newcommand{\separator}{\vfill \seprule \vfill}
 
 % Environment for consistently-formatted claim statements
 \newenvironment{claim}{\textit{Claim.}}{\vspace{-1em}}
@@ -130,7 +131,7 @@
 % Redefine epsilon and empty set commands to use better-looking versions
 \renewcommand{\epsilon}{\ensuremath{\varepsilon}}
 \renewcommand{\emptyset}{\ensuremath{\varnothing}}
-\renewcommand{\phi}{\ensuremath{\varphi}}
+% \renewcommand{\phi}{\ensuremath{\varphi}}
 
 % Redefine the bar and vec commands to use larger overlines and bold-faced vectors
 \renewcommand{\bar}{\overline}
