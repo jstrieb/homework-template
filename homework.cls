@@ -62,8 +62,23 @@
 % Set the page on letter paper with microtype improvements and better list formatting
 \RequirePackage[letterpaper]{geometry}
 \RequirePackage{microtype}
-\RequirePackage{enumerate}
 \RequirePackage{multicol}
+
+% Enable strikethrough text
+\RequirePackage[normalem]{ulem}
+
+% Fix issues with fonts when highlighting code via Pandoc
+\RequirePackage[T1]{fontenc}
+
+% Fix quotes in verbatim mode (particularly for Pandoc)
+\RequirePackage{upquote}
+
+% List formatting
+\RequirePackage{enumerate}
+\RequirePackage{enumitem}
+\setlist[itemize]{topsep=0pt}
+% Copied from pandoc template via `pandoc.exe -D latex`
+\providecommand{\tightlist}{\setlength{\parskip}{0pt}}
 
 % Skip lines and don't indent
 \setlength{\parindent}{0em}
@@ -76,11 +91,14 @@
 % Palatino typeface -- includes (old-style) text figures
 \RequirePackage[osf]{mathpazo}
 
+% Set headers and page numbers
 \RequirePackage{fancyhdr}
+
 % Ensure page number typeface matches the body
+% Note: must come before header declaration since it clears header and footer
 \fancyhf{}
 \fancyfoot[C]{\thepage}
-% Page header
+
 \lhead{\name \\ \texttt{\email}}
 \rhead{\today \\ \course{} -- \assignmentname}
 \pagestyle{fancyplain}
@@ -89,10 +107,22 @@
 % Format section headers for use in writing ``Problem X'' in small caps with appropriate spacing
 \RequirePackage{titlesec}
 \titleformat{\section}{\large\sc\lowercase}{}{0em}{}
-\titlespacing{\section}{0em}{0em}{1em}
+\titlespacing{\section}{0em}{1em}{1em}
 
 \titleformat{\subsection}{\normalsize\sc\lowercase}{}{0em}{}
 \titlespacing{\subsection}{0em}{0em}{1em}
+
+% Add spacing between footnote number and text
+\RequirePackage[hang, bottom]{footmisc}
+\setlength{\footnotemargin}{0.75em}
+
+% Enable including embedded PDFs and images
+\RequirePackage{graphicx}
+\RequirePackage{pdfpages}
+
+% Improve table formatting
+\usepackage{longtable}
+\usepackage{booktabs}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
