@@ -45,6 +45,11 @@
 \newcommand{\assignmentname}{\assignmenttype{} \hwnum}
 \newcommand{\email}{\andrewid @\emaildomain}
 
+% Fix line-breaking on hyphens in URLs. See:
+% https://tex.stackexchange.com/a/183831/150811
+% Note: must be included before hyperref package is used
+\PassOptionsToPackage{hyphens}{url}
+
 % Set PDF metadata based on the global variables
 \RequirePackage[pdftex,
     pdfauthor={\name},
@@ -59,10 +64,11 @@
 % Imports and formatting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Set the page on letter paper with microtype improvements and better list formatting
+% Set the page on letter paper with microtype improvements and correct URL breaking at hyphens
 \RequirePackage[letterpaper]{geometry}
 \RequirePackage{microtype}
 \RequirePackage{multicol}
+\RequirePackage{url}
 
 % Enable strikethrough text
 \RequirePackage[normalem]{ulem}
