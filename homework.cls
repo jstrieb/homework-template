@@ -76,8 +76,11 @@
 % Palatino typeface -- includes (old-style) text figures
 \RequirePackage[osf]{mathpazo}
 
-% Page header
 \RequirePackage{fancyhdr}
+% Ensure page number typeface matches the body
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+% Page header
 \lhead{\name \\ \texttt{\email}}
 \rhead{\today \\ \course{} -- \assignmentname}
 \pagestyle{fancyplain}
@@ -136,3 +139,4 @@
 % Redefine the bar and vec commands to use larger overlines and bold-faced vectors
 \renewcommand{\bar}{\overline}
 \renewcommand{\vec}{\mathbf}
+\newcommand{\arrowvec}{\mathaccent"017E}
